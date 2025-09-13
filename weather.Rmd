@@ -1,0 +1,102 @@
+---
+title: "weather_analyisc"
+author: "Rishabh"
+date: "2025-09-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr) #library for use data manipulation
+library(ggplot2) #use for data visulation
+library(lubridate) #use for convert to date 
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r weather}
+
+weather <- read.csv('weather.csv') #read csv file
+head(weather) #print few rows 
+
+colnames((weather)) #print colnames 
+
+sum(is.na(weather)) #check how many null values
+
+weather <- na.omit(weather) #handel null values
+print(weather)
+
+selcted_city <- c("Ahmedabad", "Delhi", "Mumbai") #fillter 3 city in dataset
+city <- subset(weather, City %in% selcted_city)
+print(city)
+
+weather <- city %>% mutate(Temp_F = Temperature * 9/5 + 32) #create new columns temp_f for count temprature
+print(weather)
+
+weather$Date <- as.Date(weather$Date) #convet into date fomate
+
+
+weekly_avg <- weather %>%  #function for count weekaly average
+  group_by(City, week = isoweek(Date)) %>%
+  summarise(
+    Avg_Temp = mean(Temperature, na.rm=TRUE), #na.rm handel null value
+    Avg_Humidity = mean(Humidity, na.rm=TRUE),
+    Avg_Rainfall = mean(Rainfall, na.rm=TRUE)
+  )
+print(weekly_avg)
+
+city_avg_temp <- weather %>% #function for count city average temprature
+  group_by(City) %>% #group by city 
+  summarise(Avg_Temp = mean(Temperature))
+city_avg_temp
+
+hottest <- city_avg_temp %>% filter(Avg_Temp == max(Avg_Temp)) #find hotest temprature 
+coldest <- city_avg_temp %>% filter(Avg_Temp == min(Avg_Temp)) #find coldest temprature
+
+hottest
+coldest
+ 
+max_rain <- weather %>% #function for find maximum rain city
+  group_by(City) %>%
+  filter(Rainfall == max(Rainfall))
+max_rain
+
+city_humidity <- weather %>%  #function for find maximum humidity city
+  group_by(City) %>%
+  summarise(Avg_Humidity = mean(Humidity))
+city_humidity
+
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+```{r fig.width=10, fig.height=6, echo=FALSE}
+
+ggplot(weather, aes(x = Date, y = Temperature, color = City)) +
+  geom_line(size = 1) +
+  labs(title = "Temperature Trends of Cities Over Time",
+       x = "Date",
+       y = "Temperature (°C)") +
+  theme_minimal(base_size = 14) +   # larger text
+  theme(legend.title = element_blank(),
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+
+ggplot(weekly_avg, aes(x=factor(week), y=Avg_Rainfall, fill=City)) +
+  geom_bar(stat="identity", position="dodge") +
+  labs(title="Weekly Average Rainfall", x="Week", y="Rainfall (mm)")
+
+# Boxplot for humidity distribution
+ggplot(weather, aes(x=City, y=Humidity, fill=City)) +
+  geom_boxplot() +
+  labs(title="Humidity Distribution Across Cities")
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
