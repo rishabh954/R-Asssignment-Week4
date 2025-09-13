@@ -7,12 +7,30 @@ By performing this analysis in R, we strengthen our skills in data manipulation,
 
 # Objectives
 
-Perform data inspection and handle missing values.
+1. Perform data inspection and handle missing values.
 
-Clean and transform the dataset (e.g., convert temperature to Fahrenheit).
+2. Clean and transform the dataset (e.g., convert temperature to Fahrenheit).
 
-Calculate weekly averages for temperature, humidity, and rainfall.
+3. Calculate weekly averages for temperature, humidity, and rainfall.
 
-Compare weather patterns across cities.
+4. Compare weather patterns across cities.
 
-Visualize results using ggplot2 (line plots, bar plots, boxplots).
+5. Visualize results using ggplot2 (line plots, bar plots, boxplots).
+
+# Dataset
+
+Synthetic dataset created for 7 cities: Delhi, Mumbai, Chennai, Kolkata, Bangalore, Hyderabad, Ahmedabad.
+
+Contains 45 days of daily data with some missing values (NA).
+
+Columns:
+
+* Date
+
+* City
+
+* Temperature (°C)
+
+* Humidity (%)
+
+* Rainfall (mm)
