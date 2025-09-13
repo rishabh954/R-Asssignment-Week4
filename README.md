@@ -82,5 +82,20 @@ Columns:
 
   <img width="1174" height="683" alt="Screenshot 2025-09-13 154227" src="https://github.com/user-attachments/assets/74e41cf5-4b12-49d4-b8b6-caa554107c24" />
 
+# Conclusion
+
+* The analysis revealed interesting weather patterns across different cities:
+
+* The hottest and coldest cities were identified based on average temperatures.
+
+* The day with the highest rainfall for each city was highlighted.
+
+* Humidity levels showed notable differences between cities.
+
+Weekly averages helped smooth short-term fluctuations and gave a clearer view of long-term trends.
+
+Through visualization, it became easier to compare trends and distributions across cities.
+Overall, this project demonstrates the usefulness of R programming in handling real-world datasets, cleaning missing values, summarizing information, and creating clear visual stories from data.
+
 
 
