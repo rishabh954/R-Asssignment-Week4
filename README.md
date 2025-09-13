@@ -59,7 +59,7 @@ Columns:
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/weather-analysis-r.git
+git clone https://github.com/rishabh954/R-Asssignment-Week4.git /n
 cd weather-analysis-r
 
 
