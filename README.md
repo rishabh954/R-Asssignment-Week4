@@ -71,5 +71,16 @@ Columns:
 # Outputs
 
 1. Plot line graphs to show temperature trends of all cities over time.
+   
    <img width="1281" height="682" alt="Screenshot 2025-09-13 153905" src="https://github.com/user-attachments/assets/108aae1a-334c-491c-b5ec-f01b23ce18f1" />
+
+2. Create bar plots for weekly average rainfall comparison
+
+  <img width="1207" height="688" alt="Screenshot 2025-09-13 154058" src="https://github.com/user-attachments/assets/cdd2d274-4c2d-42b8-89f7-b4f1537b5ef8" />
+
+3. Use boxplots to show humidity distribution across cities.
+
+  <img width="1174" height="683" alt="Screenshot 2025-09-13 154227" src="https://github.com/user-attachments/assets/74e41cf5-4b12-49d4-b8b6-caa554107c24" />
+
+
 
