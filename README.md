@@ -67,3 +67,9 @@ Columns:
 2. Open weather.Rmd in RStudio.
 
 3. Run all code chunks or knit the document to HTML/PDF.
+
+# Outputs
+
+1. Plot line graphs to show temperature trends of all cities over time.
+   <img width="1281" height="682" alt="Screenshot 2025-09-13 153905" src="https://github.com/user-attachments/assets/108aae1a-334c-491c-b5ec-f01b23ce18f1" />
+
