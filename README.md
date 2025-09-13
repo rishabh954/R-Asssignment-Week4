@@ -59,8 +59,8 @@ Columns:
 
 1. Clone the repository:
 
-git clone https://github.com/rishabh954/R-Asssignment-Week4.git /n
-cd weather-analysis-r
+ git clone https://github.com/rishabh954/R-Asssignment-Week4.git 
+ cd weather-analysis-r
 
 
 2. Open weather.Rmd in RStudio.
