@@ -19,6 +19,28 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
+1.Introduction
+
+Weather plays a crucial role in our daily lives and influences various aspects such as agriculture, transportation, and lifestyle.
+In this project, we analyze weather data (temperature, humidity, and rainfall) for multiple cities. The goal is to clean and transform the dataset, calculate weekly averages, identify weather patterns, and visualize the results for meaningful insights.
+
+By performing this analysis in R, we strengthen our skills in data manipulation, summarization, and visualization using powerful libraries like dplyr, ggplot2, and lubridate.
+
+2.Conclusion
+
+The analysis revealed interesting weather patterns across different cities:
+
+The hottest and coldest cities were identified based on average temperatures.
+
+The day with the highest rainfall for each city was highlighted.
+
+Humidity levels showed notable differences between cities.
+
+Weekly averages helped smooth short-term fluctuations and gave a clearer view of long-term trends.
+
+Through visualization, it became easier to compare trends and distributions across cities.
+Overall, this project demonstrates the usefulness of R programming in handling real-world datasets, cleaning missing values, summarizing information, and creating clear visual stories from data.
+
 ```{r weather}
 
 weather <- read.csv('weather.csv') #read csv file
@@ -100,3 +122,4 @@ ggplot(weather, aes(x=City, y=Humidity, fill=City)) +
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
