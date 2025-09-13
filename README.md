@@ -34,3 +34,35 @@ Columns:
 * Humidity (%)
 
 * Rainfall (mm)
+
+# Tools & Libraries
+
+* R
+
+* Libraries: dplyr, ggplot2, lubridate
+
+# Key Analyses
+
+* Identify the hottest and coldest cities.
+
+* Find the day with highest rainfall per city.
+
+* Compare average humidity levels between cities.
+
+* Show temperature trends over time (line graph).
+
+* Weekly rainfall comparison (bar chart).
+
+* Humidity distribution across cities (boxplot).
+
+# How to Run
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/weather-analysis-r.git
+cd weather-analysis-r
+
+
+2. Open weather.Rmd in RStudio.
+
+3. Run all code chunks or knit the document to HTML/PDF.
